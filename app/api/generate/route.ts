@@ -97,7 +97,7 @@ async function generateProtestSignImage(slogan: string): Promise<string | null> 
       style: "vivid",
     });
 
-    return response.data[0]?.url || null;
+    return response.data?.[0]?.url || null;
   } catch (error) {
     console.error('Error generating protest sign image:', error);
     return null;
